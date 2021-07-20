@@ -101,6 +101,8 @@ div {
 }
 
 div img {
+  width: 346.45px;
+  height: 100px;
   object-fit: contain;
 }
 
