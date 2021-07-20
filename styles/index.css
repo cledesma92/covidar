@@ -8,8 +8,6 @@ body {
   overflow-x: hidden;
   background-color: var(--claro);
   margin: 0 200px;
-  width: 100%;
-  height: max-content;
 }
 
 :root {
