@@ -29,11 +29,11 @@ header {
   box-shadow: 0px 5px 20px 0px var(--sombra);
 }
 
-.description {
+.resumen {
   color: var(--blanco);
   font-size: 0.5em;
 }
-.description a {
+.resumen a {
   color: var(--mar);
   text-decoration: none;
 }
