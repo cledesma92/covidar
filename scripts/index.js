@@ -10,8 +10,8 @@ const mostrarActivos = document.querySelector(".casos-activos");
 $.get(API_URL, opts, 
     function(data){
         mostrarFecha.innerText = data[(data.length)-1].Date;
-        mostrarConfirmados.innerText = data[(data.length)-1].Confirmed;
-        mostrarMuestesTotales.innerText = data[(data.length)-1].Deaths;
-        mostrarRecuperados.innerText = data[(data.length)-1].Recovered;
-        mostrarActivos.innerText = data[(data.length)-1].Active;
+        mostrarConfirmados.innerText = (data[(data.length)-1].Confirmed).toLocaleString('de-DE');
+        mostrarMuestesTotales.innerText = (data[(data.length)-1].Deaths).toLocaleString('de-DE');
+        mostrarRecuperados.innerText = (data[(data.length)-1].Recovered).toLocaleString('de-DE');
+        mostrarActivos.innerText = (data[(data.length)-1].Active).toLocaleString('de-DE');
     });
