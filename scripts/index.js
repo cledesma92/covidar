@@ -9,7 +9,7 @@ const mostrarActivos = document.querySelector(".casos-activos");
 
 $.get(API_URL, opts, 
     function(data){
-        mostrarFecha.innerText = data[(data.length)-1].Date;
+        mostrarFecha.innerText = (data[(data.length)-1].Date).substr(0,10);
         mostrarConfirmados.innerText = (data[(data.length)-1].Confirmed).toLocaleString('de-DE');
         mostrarMuestesTotales.innerText = (data[(data.length)-1].Deaths).toLocaleString('de-DE');
         mostrarRecuperados.innerText = (data[(data.length)-1].Recovered).toLocaleString('de-DE');
