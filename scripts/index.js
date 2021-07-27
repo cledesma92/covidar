@@ -16,7 +16,6 @@ const onRespons = function(data){ //Este sería el callback (una función que se
     mostrarMuestesTotales.innerText = (data[ultimoElemento].Deaths).toLocaleString('de-DE');
     mostrarRecuperados.innerText = (data[ultimoElemento].Recovered).toLocaleString('de-DE');
     mostrarActivos.innerText = (data[ultimoElemento].Active).toLocaleString('de-DE');
-    console.log
 }
 
 //jQuery.get( url [, data ] [, success ] [, dataType ] )
@@ -25,4 +24,8 @@ const onRespons = function(data){ //Este sería el callback (una función que se
 //  success: función de callback que se ejecuta si la solicitud se realiza correctamente.
 //  dataType: ‎para especificar el tipo de datos esperados del servidor. Valor predeterminado: Intelligent Guess (xml, json, script, text, html).‎
 
-$.get(API_URL, opts, onRespons);
+$
+    .get(API_URL, opts, onRespons)
+    .fail(() => {
+    console.log('Sucedió un error. No se pudo obtener la información solicitada')
+});
